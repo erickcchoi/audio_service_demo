@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Audio Service Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: AudioServiceWidget(child: MainScreen()),
+      // home: AudioServiceWidget(child: MainScreen()),
+      home: MainScreen(),
     );
   }
 }
@@ -54,23 +55,25 @@ class _MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         title: const Text('Audio Service Demo'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          playMediaButtonInit(),
-          playMediaButton0(),
-          playMediaButton1(),
-          pauseButton(),
-          StreamBuilder<ScreenState>(
-            stream: screenStateStream,
-            builder: (context, snapshot) {
-              final screenState = snapshot.data;
-              final mediaItem = screenState?.mediaItem;
-              final state = screenState?.playbackState;
-              return positionIndicator(mediaItem, state);
-            },
-          ),
-        ],
+      body: AudioServiceWidget(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            playMediaButtonInit(),
+            playMediaButton0(),
+            playMediaButton1(),
+            pauseButton(),
+            StreamBuilder<ScreenState>(
+              stream: screenStateStream,
+              builder: (context, snapshot) {
+                final screenState = snapshot.data;
+                final mediaItem = screenState?.mediaItem;
+                final state = screenState?.playbackState;
+                return positionIndicator(mediaItem, state);
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
