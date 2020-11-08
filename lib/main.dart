@@ -25,14 +25,14 @@ class MyApp extends StatelessWidget {
 
 List<MediaItem> mItem = [
   MediaItem(
-    id: "http://aod.cos.tx.xmcdn.com/storages/58b6-audiofreehighqps/04/7B/CMCoOR8DeN7DAAKvZwBjywsO.m4a",
+    id : "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p08xsbc0.mp3",
     album: "BBBB",
     title: "Media Item 0",
     artist: "AAAaaa",
     artUri: "https://media.wnyc.org/i/1400/1400/l/80/1/ScienceFriday_WNYCStudios_1400.jpg",
   ),
   MediaItem(
-    id: "http://aod.cos.tx.xmcdn.com/storages/9647-audiofreehighqps/C0/97/CMCoOSMDeircAAGWRQBkHzof.m4a",
+    id: "http://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p08vcc43.mp3",
     album: "CCCC",
     title: "Media Item 1",
     artist: "DDDDDD",
